@@ -84,12 +84,12 @@ const webthief = require("webthief");
 **To get html of any webpage:**
 ```js
 /* Callback method */
-webthief.gethtml("https://nepsho.github.io/example/meta_tags.html",(data)=>{
+webthief.getHtml("https://nepsho.github.io/example/meta_tags.html",(data)=>{
     console.log(data);
 })
 
 /* Promise method */
-webthief.gethtml("https://nepsho.github.io/example/meta_tags.html").then(function(data) {
+webthief.getHtml("https://nepsho.github.io/example/meta_tags.html").then(function(data) {
 	console.log(data);
 }).catch(function(error) {
 	console.log(error);
@@ -97,7 +97,7 @@ webthief.gethtml("https://nepsho.github.io/example/meta_tags.html").then(functio
 
 /* async/await method */
 async function demo(){
-    var result = await webthief.gethtml("https://nepsho.github.io/example/meta_tags.html");
+    var result = await webthief.getHtml("https://nepsho.github.io/example/meta_tags.html");
     console.log(result);
 } 
 
@@ -126,12 +126,12 @@ var option = {
 ```
 ```js
 /* Callback method */
-webthief.getmeta("https://nepsho.github.io/example/meta_tags.html",option,(data)=>{
+webthief.getMeta("https://nepsho.github.io/example/meta_tags.html",option,(data)=>{
     console.log(data);
 })
 
 /* Promise method */
-webthief.getmeta("https://nepsho.github.io/example/meta_tags.html",option).then(function(data){
+webthief.getMeta("https://nepsho.github.io/example/meta_tags.html",option).then(function(data){
     console.log(data)
 }).catch(function(error) {
 	console.log(error);
@@ -139,17 +139,10 @@ webthief.getmeta("https://nepsho.github.io/example/meta_tags.html",option).then(
 
 /* async/await method */
 async function demo(){
-    var result = await webthief.getmeta("https://nepsho.github.io/example/meta_tags.html",option);
+    var result = await webthief.getMeta("https://nepsho.github.io/example/meta_tags.html",option);
     console.log(result);
 } 
 
-/* Sample output 
-    { 
-        logo : "https://nepsho.github.io/lib/img/logo.png",
-        title : "NepSho",
-        description : "Promise and callback based website-info getter using metadata of websites..."
-    }
-*/
 /* Sample output 
     {
     	success: true,
