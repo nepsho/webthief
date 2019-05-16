@@ -151,6 +151,7 @@ async function demo(){
     }
 */
 ```
+**Error callback data (In case any error):**
 ```js
 //Error return object type
 {
