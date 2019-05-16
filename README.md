@@ -42,9 +42,9 @@ $ yarn add webthief
 ## Some Basic Meta Tags in HTML
 ```html
 <meta name="description" content="Website info api"/>
-<meta name="keywords" content="webthief, api, nodejs"/>
+<meta name="keywords" content="webthief, api, nodejs, python"/>
 <meta name="subject" content="website subject">
-<meta name="copyright"content="nepsho">
+<meta name="copyright" content="nepsho">
 <meta name="language" content="en">
 <meta name="robots" content="index,follow" />
 <meta name="revised" content="Saturday, May 9th, 2019, 0:00 am" />
@@ -150,7 +150,45 @@ async function demo(){
         description : "Promise and callback based website-info getter using metadata of websites..."
     }
 */
+/* Sample output 
+    {
+    	success: true,
+	response: {
+		logo : "https://nepsho.github.io/lib/img/logo.png",
+        	title : "NepSho",
+        	description : "Promise and callback based website-info getter using metadata of websites..."
+	}
+    }
+*/
 ```
+**To get images from webpage:**
+```js
+/* Callback method */
+webthief.getSiteImages("https://nepsho.github.io/example/meta_tags.html",(data)=>{
+    console.log(data);
+})
+
+/* Promise method */
+webthief.getSiteImages("https://nepsho.github.io/example/meta_tags.html").then(function(data) {
+	console.log(data);
+}).catch(function(error) {
+	console.log(error);
+});
+
+/* async/await method */
+async function demo(){
+    var result = await webthief.getSiteImages("https://nepsho.github.io/example/meta_tags.html");
+    console.log(result);
+} 
+
+/* Sample output 
+    {
+    	success: true,
+	response: [ArrayOfImages]
+    }
+*/
+```
+
 **Error callback data (In case any error):**
 ```js
 //Error return object type
