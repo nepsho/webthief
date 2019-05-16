@@ -1,0 +1,37 @@
+{
+  "name": "webthief",
+  "version": "1.0.1",
+  "description": "callback and promise based site info getter",
+  "main": "index.js",
+  "contributors": [
+    "bcrazydreamer <bcrazydreamer@gmail.com>"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "MIT",
+  "repository": "nepsho/webthief",
+  "bugs": {
+    "url": "https://github.com/nepsho/webthief/issues"
+  },
+  "author": "bcrazydreamer <bcrazydreamer@gmail.com>",
+  "homepage": "https://nepsho.github.io/opensource/webthief.html",
+  "keywords": [
+    "api",
+    "web",
+    "rest",
+    "webthief",
+    "restful",
+    "scraping",
+    "JavaScript"
+  ],
+  "files": [
+    "LICENSE",
+    "README.md",
+    "index.js",
+    "lib/"
+  ],
+  "dependencies": {
+    "request": "^2.88.0"
+  }
+}
