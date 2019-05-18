@@ -31,6 +31,9 @@
     "index.js",
     "lib/"
   ],
+  "bin" : {
+    "webthief" : "./lib/cli/index.js" 
+  },
   "dependencies": {
     "request": "^2.88.0"
   }
