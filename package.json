@@ -1,6 +1,6 @@
 {
   "name": "webthief",
-  "version": "1.0.1",
+  "version": "0.0.1",
   "description": "callback and promise based site info getter",
   "main": "index.js",
   "contributors": [
