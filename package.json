@@ -35,7 +35,7 @@
     "webthief": "./lib/cli/index.js"
   },
   "dependencies": {
-    "bvalid": "0.0.1",
+    "bvalid": ">0.0.1",
     "request": "^2.88.0"
   }
 }
