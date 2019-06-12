@@ -218,7 +218,7 @@ $ webthief images https://nepsho.github.io/example/meta_tags.html -d
 ```
 
 ## licence
-MIT [licence](https://opensource.org/licenses/MIT)
+MIT [licence](https://github.com/nepsho/webthief/blob/master/LICENSE)
 
 ## Author
 @BCrazyDreamer
