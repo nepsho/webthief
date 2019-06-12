@@ -196,13 +196,25 @@ $ webthief [-method-] [-input-] [-option-]
  - Get Meta
      - meta | getmeta
  - Get Images
-     - image | getsiteimages
+     - images | getsiteimages
     
 **input:** Basically a valid url.
+
 **option:** Option parameter basically -d for download html files and images. 
+## CLI Examples
+```bash
+$ webthief html https://nepsho.github.io/example/meta_tags.html
+or to download page also
+$ webthief html https://nepsho.github.io/example/meta_tags.html -d
+```
 
 ```bash
-$ webthief 
+$ webthief meta https://nepsho.github.io/example/meta_tags.html
+```
+```bash
+$ webthief images https://nepsho.github.io/example/meta_tags.html
+or to download images also
+$ webthief images https://nepsho.github.io/example/meta_tags.html -d
 ```
 
 ## licence
