@@ -1,2 +1,2 @@
-//Base file
+"use strict";
 module.exports = require("./lib/webthief.js")
