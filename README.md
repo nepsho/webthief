@@ -23,21 +23,8 @@ ES5 | ES6 | Callback | Promise |async/await|
 ## Installing 
 [![NPM](https://nodei.co/npm/webthief.png?mini=true)](https://nodei.co/npm/webthief/)
 
-**Using npm:**
 ```bash
 $ npm install webthief
-```
-
-**Using bower:**
-
-```bash
-$ bower install webthief
-```
-
-**Using yarn:**
-
-```bash
-$ yarn add webthief
 ```
 ## Some Basic Meta Tags in HTML
 ```html
@@ -190,10 +177,33 @@ async function demo(){
     error: "ErrorType",
     detail: "detail message of error"
 }
-
 ```
 In case of empty option then a default option is automatically set which contain logo, title and description.
 In this API both core function is designed in such way we can user as promise and as callback.
+## CLI
+```bash
+$ npm install webthief -g
+```
+>**Valid Fields**: *[meta|getmata], [html|gethtml], [images|getsiteimages]*
+>(These options used for cli)
+
+```bash
+$ webthief [-method-] [-input-] [-option-]
+```
+**method:**
+ - Get Html
+     - html | gethtml
+ - Get Meta
+     - meta | getmeta
+ - Get Images
+     - image | getsiteimages
+    
+**input:** Basically a valid url.
+**option:** Option parameter basically -d for download html files and images. 
+
+```bash
+$ webthief 
+```
 
 ## licence
 MIT [licence](https://opensource.org/licenses/MIT)
