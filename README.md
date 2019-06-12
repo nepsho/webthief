@@ -1,6 +1,7 @@
 # WebThief
 [![NPM](https://nodei.co/npm/webthief.png)](https://nodei.co/npm/webthief/)
 
+[![Build Status](https://travis-ci.org/nepsho/webthief.svg?branch=master)](https://travis-ci.org/nepsho/webthief)
 [![npm version](https://img.shields.io/npm/v/webthief.svg?style=flat-square)](https://www.npmjs.org/package/webthief)
 [![npm license](https://img.shields.io/static/v1.svg?label=License&message=MIT&color=informational)](https://github.com/nepsho/webthief/blob/master/LICENSE)
 [![npm repository](https://img.shields.io/static/v1.svg?label=Repository&message=GitHub&color=yellow)](https://github.com/nepsho/webthief)
