@@ -180,7 +180,7 @@ async function demo(){
 ```
 In case of empty option then a default option is automatically set which contain logo, title and description.
 In this API both core function is designed in such way we can user as promise and as callback.
-## CLI
+## CLI Usage
 ```bash
 $ npm install webthief -g
 ```
@@ -191,7 +191,7 @@ $ npm install webthief -g
 $ webthief [-method-] [-input-] [-option-]
 ```
 **method:**
- - Get Html
+ - Get HTML
      - html | gethtml
  - Get Meta
      - meta | getmeta
