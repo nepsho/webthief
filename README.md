@@ -20,8 +20,7 @@ ES5 | ES6 | Callback | Promise |async/await|
 --- | --- | --- | --- | --- |
 ✔|✔|✔|✔|✔|✔
 
-## Installing 
-[![NPM](https://nodei.co/npm/webthief.png?mini=true)](https://nodei.co/npm/webthief/)
+## Installing
 
 ```bash
 $ npm install webthief
