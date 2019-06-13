@@ -12,7 +12,7 @@
 - Get any website logo, title and description
 - Support modren metatag scraping
 - Fully **promise** and **callback** based
-- Support with **ES6** [async/await](https://en.wikipedia.org/wiki/Async/await)
+- Support with **ES6** *async/await*
 - Support multiple metatag scraping
 
 ## Support
