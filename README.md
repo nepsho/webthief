@@ -7,85 +7,100 @@
 [![npm author](https://img.shields.io/static/v1.svg?label=Author&message=bcrazydreamer&color=success)](https://www.npmjs.com/~bcrazydreamer)
 
 **Promise** and **Callback** based website-info getter using meta data of websites.
+
 ## Features
+
 - Get any web page source code with webthief
 - Get any website logo, title and description
 - Support modren metatag scraping
 - Fully **promise** and **callback** based
-- Support with **ES6** *async/await*
+- Support with **ES6** _async/await_
 - Support multiple metatag scraping
 
 ## Support
-ES5 | ES6 | Callback | Promise |async/await|
---- | --- | --- | --- | --- |
-✔|✔|✔|✔|✔|✔
+
+| ES5 | ES6 | Callback | Promise | async/await |
+| --- | --- | -------- | ------- | ----------- | --- |
+| ✔   | ✔   | ✔        | ✔       | ✔           | ✔   |
 
 ## Installing
 
 ```bash
 $ npm install webthief
 ```
+
 ## Some Basic Meta Tags in HTML
+
 ```html
-<meta name="description" content="Website info api"/>
-<meta name="keywords" content="webthief, api, nodejs, python"/>
-<meta name="subject" content="website subject">
-<meta name="copyright" content="nepsho">
-<meta name="language" content="en">
+<meta name="description" content="Website info api" />
+<meta name="keywords" content="webthief, api, nodejs, python" />
+<meta name="subject" content="website subject" />
+<meta name="copyright" content="nepsho" />
+<meta name="language" content="en" />
 <meta name="robots" content="index,follow" />
 <meta name="revised" content="Saturday, May 9th, 2019, 0:00 am" />
-<meta name="abstract" content="any abstract">
-<meta name="topic" content="any topic">
-<meta name="summary" content="any summary">
-<meta name="author" content="bcrazydreamer, bcrazydreamer@gmail.com">
-<meta name="designer" content="bcrazydreamer">
-<meta name="reply-to" content="bcrazydreamer@gmail.com">
-<meta name="url" content="https://nepsho.github.io/">
-<meta name="category" content="any category">
+<meta name="abstract" content="any abstract" />
+<meta name="topic" content="any topic" />
+<meta name="summary" content="any summary" />
+<meta name="author" content="bcrazydreamer, bcrazydreamer@gmail.com" />
+<meta name="designer" content="bcrazydreamer" />
+<meta name="reply-to" content="bcrazydreamer@gmail.com" />
+<meta name="url" content="https://nepsho.github.io/" />
+<meta name="category" content="any category" />
 ```
+
 ## Some OpenGraph Meta Tags in HTML
+
 ```html
-<meta name="og:title" content="webthief"/>
-<meta name="og:type" content="API"/>
-<meta name="og:url" content="https://nepsho.github.io/"/>
-<meta name="og:image" content="https://nepsho.github.io/lib/img/logo.png"/>
-<meta name="og:email" content="bcrazydreamer@gmail.com"/>
-<meta name="og:phone_number" content="123-456-7890"/>
+<meta name="og:title" content="webthief" />
+<meta name="og:type" content="API" />
+<meta name="og:url" content="https://nepsho.github.io/" />
+<meta name="og:image" content="https://nepsho.github.io/lib/img/logo.png" />
+<meta name="og:email" content="bcrazydreamer@gmail.com" />
+<meta name="og:phone_number" content="123-456-7890" />
 ```
 
 ## Supported meta fields by webthief
-|S. No|a|b|c|d|
-| --- | --- | --- | --- | --- |
-|1|logo|description|title|keywords|subject|
-|2|copyright|language|robots|revised|abstract|
-|3|reply-to|topic|summary|author|designer|
-|4|country-name|url|category|site_name|email|
-|5|phone_number|
+
+| S. No | a            | b           | c        | d         |
+| ----- | ------------ | ----------- | -------- | --------- | -------- |
+| 1     | logo         | description | title    | keywords  | subject  |
+| 2     | copyright    | language    | robots   | revised   | abstract |
+| 3     | reply-to     | topic       | summary  | author    | designer |
+| 4     | country-name | url         | category | site_name | email    |
+| 5     | phone_number |
 
 ## Examples
 
 ```js
-const webthief = require("webthief");
+const webthief = require('webthief');
 ```
+
 **To get html of any webpage:**
+
 ```js
 /* Callback method */
-webthief.getHtml("https://nepsho.github.io/example/meta_tags.html",(data)=>{
-    console.log(data);
-})
-
-/* Promise method */
-webthief.getHtml("https://nepsho.github.io/example/meta_tags.html").then(function(data) {
-	console.log(data);
-}).catch(function(error) {
-	console.log(error);
+webthief.getHtml('https://nepsho.github.io/example/meta_tags.html', data => {
+  console.log(data);
 });
 
+/* Promise method */
+webthief
+  .getHtml('https://nepsho.github.io/example/meta_tags.html')
+  .then(function (data) {
+    console.log(data);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+
 /* async/await method */
-async function demo(){
-    var result = await webthief.getHtml("https://nepsho.github.io/example/meta_tags.html");
-    console.log(result);
-} 
+async function demo() {
+  var result = await webthief.getHtml(
+    'https://nepsho.github.io/example/meta_tags.html',
+  );
+  console.log(result);
+}
 
 /* Sample output 
     { 
@@ -98,36 +113,50 @@ async function demo(){
 ```
 
 **To get meta of any webpage:**
-for meta request a option is required which control and specify the desired output. 
+for meta request a option is required which control and specify the desired output.
+
 ```js
 var option = {
-    fields: ["logo","description","title"] /*fields you want*/
+  fields: ['logo', 'description', 'title'] /*fields you want*/,
 };
 ```
+
 **or**
+
 ```js
 var option = {
-    fields: ["*"] /*for all supported field*/
+  fields: ['*'] /*for all supported field*/,
 };
 ```
+
 ```js
 /* Callback method */
-webthief.getMeta("https://nepsho.github.io/example/meta_tags.html",option,(data)=>{
+webthief.getMeta(
+  'https://nepsho.github.io/example/meta_tags.html',
+  option,
+  data => {
     console.log(data);
-})
+  },
+);
 
 /* Promise method */
-webthief.getMeta("https://nepsho.github.io/example/meta_tags.html",option).then(function(data){
-    console.log(data)
-}).catch(function(error) {
-	console.log(error);
-});
+webthief
+  .getMeta('https://nepsho.github.io/example/meta_tags.html', option)
+  .then(function (data) {
+    console.log(data);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
 
 /* async/await method */
-async function demo(){
-    var result = await webthief.getMeta("https://nepsho.github.io/example/meta_tags.html",option);
-    console.log(result);
-} 
+async function demo() {
+  var result = await webthief.getMeta(
+    'https://nepsho.github.io/example/meta_tags.html',
+    option,
+  );
+  console.log(result);
+}
 
 /* Sample output 
     {
@@ -140,25 +169,35 @@ async function demo(){
     }
 */
 ```
+
 **To get images from webpage:**
+
 ```js
 /* Callback method */
-webthief.getSiteImages("https://nepsho.github.io/example/meta_tags.html",(data)=>{
+webthief.getSiteImages(
+  'https://nepsho.github.io/example/meta_tags.html',
+  data => {
     console.log(data);
-})
+  },
+);
 
 /* Promise method */
-webthief.getSiteImages("https://nepsho.github.io/example/meta_tags.html").then(function(data) {
-	console.log(data);
-}).catch(function(error) {
-	console.log(error);
-});
+webthief
+  .getSiteImages('https://nepsho.github.io/example/meta_tags.html')
+  .then(function (data) {
+    console.log(data);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
 
 /* async/await method */
-async function demo(){
-    var result = await webthief.getSiteImages("https://nepsho.github.io/example/meta_tags.html");
-    console.log(result);
-} 
+async function demo() {
+  var result = await webthief.getSiteImages(
+    'https://nepsho.github.io/example/meta_tags.html',
+  );
+  console.log(result);
+}
 
 /* Sample output 
     {
@@ -169,6 +208,7 @@ async function demo(){
 ```
 
 **Error callback data (In case any error):**
+
 ```js
 //Error return object type
 {
@@ -177,30 +217,38 @@ async function demo(){
     detail: "detail message of error"
 }
 ```
+
 In case of empty option then a default option is automatically set which contain logo, title and description.
 In this API both core function is designed in such way we can user as promise and as callback.
+
 ## CLI Usage
+
 ```bash
 $ npm install webthief -g
 ```
->**Valid Fields**: *[meta|getmata], [html|gethtml], [images|getsiteimages]*
->(These options used for cli)
+
+> **Valid Fields**: _[meta|getmata], [html|gethtml], [images|getsiteimages]_
+> (These options used for cli)
 
 ```bash
 $ webthief [-method-] [-input-] [-option-]
 ```
+
 **method:**
- - Get HTML
-     - html | gethtml
- - Get Meta
-     - meta | getmeta
- - Get Images
-     - images | getsiteimages
-    
+
+- Get HTML
+  - html | gethtml
+- Get Meta
+  - meta | getmeta
+- Get Images
+  - images | getsiteimages
+
 **input:** Basically a valid url.
 
-**option:** Option parameter basically -d for download html files and images. 
+**option:** Option parameter basically -d for download html files and images.
+
 ## CLI Examples
+
 ```bash
 $ webthief html https://nepsho.github.io/example/meta_tags.html
 or to download page also
@@ -210,6 +258,7 @@ $ webthief html https://nepsho.github.io/example/meta_tags.html -d
 ```bash
 $ webthief meta https://nepsho.github.io/example/meta_tags.html
 ```
+
 ```bash
 $ webthief images https://nepsho.github.io/example/meta_tags.html
 or to download images also
@@ -217,7 +266,9 @@ $ webthief images https://nepsho.github.io/example/meta_tags.html -d
 ```
 
 ## licence
+
 MIT [licence](https://github.com/nepsho/webthief/blob/master/LICENSE)
 
 ## Author
+
 @BCrazyDreamer

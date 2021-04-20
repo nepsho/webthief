@@ -1,2 +1,2 @@
-"use strict";
-module.exports = require("./lib/webthief.js")
+'use strict';
+module.exports = require('./lib/webthief.js');
