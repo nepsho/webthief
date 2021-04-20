@@ -7,7 +7,9 @@
     "bcrazydreamer <bcrazydreamer@gmail.com>"
   ],
   "scripts": {
-    "test": "node ./test/testCase"
+    "test": "node ./test/testCase",
+    "prettier": "prettier --check **/*.js",
+    "prettier:write": "yarn prettier --write"
   },
   "license": "MIT",
   "repository": {
@@ -37,9 +39,24 @@
   "bin": {
     "webthief": "./lib/cli/index.js"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,ts,json,md}": [
+      "prettier --write"
+    ]
+  },
   "dependencies": {
     "bvalid": "^1.0.0",
     "obclone": "^1.0.0",
     "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "husky": "^6.0.0",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1"
   }
 }
