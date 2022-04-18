@@ -7,7 +7,9 @@
     "bcrazydreamer <bcrazydreamer@gmail.com>"
   ],
   "scripts": {
-    "test": "node ./test/testCase"
+    "test": "node ./test/testCase",
+    "prettier": "prettier \"**/*.js\"",
+    "prettier:write": "yarn prettier --write"
   },
   "license": "MIT",
   "repository": {
@@ -40,6 +42,7 @@
   "dependencies": {
     "bvalid": "^1.0.0",
     "obclone": "^1.0.0",
+    "prettier": "^2.6.2",
     "request": "^2.88.0"
   }
 }
